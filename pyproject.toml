@@ -4,10 +4,12 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11.13"
-dependencies = [
-    "django>=5.2.5",
-    "python-dotenv>=1.1.1",
-]
+dependencies = ["django>=5.2.5", "python-dotenv>=1.1.1"]
+
+[tool.ruff]
+exclude = ["migrations"]
 
 [tool.ruff.lint]
 select = ["ALL"]
+ignore = ["D100", "D101", "D103", "D104", "D105", "DTZ011"]
+unfixable = ["F401"]
